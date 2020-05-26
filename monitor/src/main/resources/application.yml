@@ -29,4 +29,3 @@ turbine:
   combine-host: true
   instanceUrlSuffix:
     default: actuator/hystrix.stream
-#    default: actuator/hystrix.stream

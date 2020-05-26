@@ -11,17 +11,7 @@ spring:
   application:
     name: server02
 
-#  rabbitmq:
-#    port: 5672
-#    host: localhost
-#    username: guest
-#    password: guest
-
   cloud:
-#    bus:
-#      enabled: true
-#      trace:
-#        enabled: true
     config:
       # 远程仓库的分支
       label: master
@@ -29,7 +19,6 @@ spring:
       # 和git里的文件名对应
       profile: dev
       # 注册在总服务里面的，配置服务 地址
-#      uri: http://localhost:8888/
       discovery:
         enabled: true
         service-id: config-server

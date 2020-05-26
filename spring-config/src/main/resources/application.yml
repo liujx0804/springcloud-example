@@ -9,12 +9,6 @@ spring:
   application:
     name: config-server
 
-#  rabbitmq:
-#    host: localhost
-#    port: 5672
-#    username: guest
-#    password: guest
-
   cloud:
     config:
       server:
@@ -24,15 +18,3 @@ spring:
           username: 2876564629@qq.com
           password: 7k8;_&fAHA6HT0
       label: master
-#    bus:
-#      enabled: true
-#      trace:
-#        enabled: true
-#  profiles: dev
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: bus-refresh
-#env:
-#  dev
