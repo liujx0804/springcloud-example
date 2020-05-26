@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: service-zuul
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7010/eureka/
+
+zuul:
+  routes:
+    feign:
+      path: /feign/**
+      serviceId: feign-service
+    ribbon:
+      path: /ribbon/**
+      serviceId: ribbon-service
+  host:
+    connect-timeout-millis: 3000
+    socket-timeout-millis: 3000
+  #添加代理头
+  add-proxy-headers: true
+
+  #Zuul为了安全起见，过滤了敏感头部，默认移除了"Cookie", “Set-Cookie”, “Authorization”
+  #不填，则不拦截
+  sensitive-headers:
+ribbon:
+  ReadTimeout: 3000
+  ConnectTimeout: 3000

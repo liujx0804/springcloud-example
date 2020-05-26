@@ -1,0 +1,35 @@
+server:
+  port: 8881
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7010/eureka/
+
+spring:
+  application:
+    name: server02
+
+#  rabbitmq:
+#    port: 5672
+#    host: localhost
+#    username: guest
+#    password: guest
+
+  cloud:
+#    bus:
+#      enabled: true
+#      trace:
+#        enabled: true
+    config:
+      # 远程仓库的分支
+      label: master
+      # dev 开发环境配置文件 |  test 测试环境  |  pro 正式环境
+      # 和git里的文件名对应
+      profile: dev
+      # 注册在总服务里面的，配置服务 地址
+#      uri: http://localhost:8888/
+      discovery:
+        enabled: true
+        service-id: config-server

@@ -1,0 +1,38 @@
+server:
+  port: 8888
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7010/eureka/
+
+spring:
+  application:
+    name: config-server
+
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+#    username: guest
+#    password: guest
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/liujx0804/Config
+          search-paths: conf
+          username: 2876564629@qq.com
+          password: 7k8;_&fAHA6HT0
+      label: master
+#    bus:
+#      enabled: true
+#      trace:
+#        enabled: true
+#  profiles: dev
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: bus-refresh
+#env:
+#  dev
