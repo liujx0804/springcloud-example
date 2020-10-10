@@ -15,6 +15,6 @@ spring:
         git:
           uri: https://github.com/liujx0804/Config
           search-paths: conf
-          username: 2876564629@qq.com
-          password: 7k8;_&fAHA6HT0
+          username: 你的git账号
+          password: 你的git密码
       label: master

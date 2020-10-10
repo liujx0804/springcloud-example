@@ -8,8 +8,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="zuul" />
         <module name="spring-config" />
-        <module name="feign" />
         <module name="eureka" />
+        <module name="feign" />
         <module name="ribbon" />
         <module name="producer" />
         <module name="refresh-git-config" />
